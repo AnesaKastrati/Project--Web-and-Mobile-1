@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- BEGIN Anesa Kastrati -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRent - Booking</title>
+
+    <link rel="stylesheet" href="css-styles.css">
+    <script defer src="js-main.js"></script>
+    <!-- END Anesa Kastrati -->
+</head>
+
+<body>
+<!-- BEGIN Anesa Kastrati -->
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">AutoRent</div>
+    <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+        <li><a class="nav-link active" href="booking.html">Booking</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="sub-hero">
+    <h1>Book Your Vehicle</h1>
+    <p>Select your dates, time, and vehicle type to get started.</p>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="form-section">
+    <form id="booking-form" novalidate>
+
+        <div class="form-group">
+            <label for="booking-name">Full Name</label>
+            <input type="text" id="booking-name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="booking-email">Email</label>
+            <input type="email" id="booking-email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="booking-vehicle">Vehicle Type</label>
+            <select id="booking-vehicle" required>
+                <option value="">Select a vehicle</option>
+                <option value="Luxury Sedan">Luxury Sedan</option>
+                <option value="Family SUV">Family SUV</option>
+                <option value="Convertible">Convertible</option>
+                <option value="City Compact">City Compact</option>
+            </select>
+        </div>
+
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="booking-start-date">Start Date</label>
+                <input type="date" id="booking-start-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="booking-end-date">End Date</label>
+                <input type="date" id="booking-end-date" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="booking-time">Pickup Time</label>
+            <input type="time" id="booking-time" required>
+        </div>
+
+        <div class="form-group">
+            <label>Extras</label>
+            <div class="checkbox-row">
+                <label><input type="checkbox" value="GPS"> GPS</label>
+                <label><input type="checkbox" value="Child Seat"> Child Seat</label>
+                <label><input type="checkbox" value="Additional Driver"> Additional Driver</label>
+            </div>
+        </div>
+
+        <button class="btn-primary wide" type="submit">Confirm Booking</button>
+
+        <div id="booking-message" class="form-message"></div>
+
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="new-footer">
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            <h1>Auto<span>Rent</span></h1>
+        </div>
+
+        <div class="footer-details">
+            <p>123 Premium Road, New York, NY</p>
+            <p>Phone: +1 (555) 123-4567</p>
+
+            <div class="footer-socials">
+                <div class="circle">f</div>
+                <div class="circle">IG</div>
+                <div class="circle">X</div>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <button onclick="location.href='contact.html'">Contact Us</button>
+        </div>
+    </div>
+
+    <div class="footer-links-section">
+        <div class="footer-column">
+            <h3>About ▼</h3>
+            <ul>
+                <li><a href="about.html">Company Info</a></li>
+                <li><a href="about.html">Our Team</a></li>
+                <li><a href="about.html">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Vehicles ▼</h3>
+            <ul>
+                <li><a href="vehicles.html">Luxury Cars</a></li>
+                <li><a href="vehicles.html">SUVs</a></li>
+                <li><a href="vehicles.html">Convertibles</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="footer-bottom">© 2025 AutoRent — Created by Anesa Kastrati</p>
+</footer>
+
+<button id="backToTop">↑</button>
+
+<!-- END Anesa Kastrati -->
+</body>
+</html>
