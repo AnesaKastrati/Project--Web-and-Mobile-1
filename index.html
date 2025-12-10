@@ -28,51 +28,78 @@
         <li><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
 </nav>
-    <!-- HERO -->
-<section class="hero">
-    <div class="hero-inner">
-        <h1>Find Your Perfect Ride</h1>
-        <p>Premium cars, flexible plans, and exceptional service for every journey.</p>
 
-        <div class="hero-actions">
-            <button class="btn-primary" onclick="window.location.href='booking.html'">
-    Book a Vehicle
-</button>
+<!-- HERO -->
+<!-- NEW PREMIUM HERO (Split Layout + Video) -->
+<section class="hero-split">
 
-            <button class="btn-secondary" id="hero-vehicles-btn" onclick="window.location.href='vehicles.html'">
-    View Vehicles
-</button>
+    <!-- Background Video -->
+    <video class="hero-split-video" autoplay muted loop playsinline>
+    <source src="video/video 2.mp4" type="video/mp4">
+</video>
 
+
+    <div class="hero-split-content">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-left">
+            <h1>Find Your<br>Perfect Ride</h1>
+            <p class="hero-subtext">
+                Premium cars, flexible plans, and an effortless rental experience.
+            </p>
+
+            <button class="hero-btn-primary" onclick="window.location.href='booking.html'">
+                Book a Vehicle
+            </button>
+
+            <button class="hero-btn-secondary" onclick="window.location.href='vehicles.html'">
+                View Vehicles
+            </button>
         </div>
-    </div>
-</section>
 
+        <!-- RIGHT SIDE -->
+        <div class="hero-right">
+            <div class="floating-box">
+                <video autoplay muted loop playsinline class="floating-video">
+                    <source src="https://cdn.coverr.co/videos/coverr-night-driving-through-the-city-7802/1080p.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- WHY CHOOSE SECTION -->
-<section class="why-choose">
+<section class="why-choose luxury">
     <h2 class="section-title">Why Choose AutoRent?</h2>
+    <p class="section-subtitle">Designed for customers who expect comfort, quality, and a truly exceptional rental experience.</p>
 
     <div class="why-grid">
-        <div class="why-box">
-            <div class="why-icon">🚗</div>
-            <h3>Wide Vehicle Selection</h3>
-            <p>Choose from compact cars, SUVs, luxury sedans, and more—perfect for any trip.</p>
+
+        <div class="why-box luxury-box">
+            <div class="why-icon luxury-icon">💎</div>
+            <h3>Premium Fleet</h3>
+            <p>Choose from luxury sedans, elite SUVs, and executive models—perfectly maintained for a first-class ride.</p>
         </div>
 
-        <div class="why-box">
-            <div class="why-icon">⚡</div>
-            <h3>Fast & Easy Booking</h3>
-            <p>Reserve your vehicle in seconds with our simple and secure booking process.</p>
+        <div class="why-box luxury-box">
+            <div class="why-icon luxury-icon">⚜️</div>
+            <h3>Seamless Booking</h3>
+            <p>A smooth, elegant booking experience designed for speed, convenience, and total peace of mind.</p>
         </div>
 
-        <div class="why-box">
-            <div class="why-icon">🛟</div>
-            <h3>24/7 Customer Support</h3>
-            <p>Our experts are always here to help you during your rental experience.</p>
+        <div class="why-box luxury-box">
+            <div class="why-icon luxury-icon">🎩</div>
+            <h3>White-Glove Support</h3>
+            <p>Our dedicated team ensures exceptional service—before, during, and after your rental.</p>
         </div>
+
     </div>
 </section>
+
+
 
 <!-- HOW IT WORKS -->
 <section class="how-it-works">
@@ -216,18 +243,23 @@
 </section>
 
 <!-- LOCATION -->
+<!-- LOCATION -->
 <section class="location-section">
     <p class="location-subtitle">Visit Us</p>
     <h2 class="location-title">Our Location</h2>
 
     <div class="location-map">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2799637702583!2d21.150475008628867!3d42.65542229803765"
-            allowfullscreen loading="lazy"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93899.02842017805!2d21.083128758203134!3d42.65405159999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f069911e159%3A0xf2369798b9ee240!2sBill%20Clinton%20Statue!5e0!3m2!1sen!2s!4v1765369472664!5m2!1sen!2s"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
     <button class="location-btn" id="location-book-btn">Book an Appointment</button>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="new-footer">
