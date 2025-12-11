@@ -114,6 +114,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //Start Lea 
+
+    document.querySelectorAll('.learn-more').forEach(btn => 
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        let name = prompt(`You clicked "${btn.closest('article').querySelector('h3').textContent}". Enter your name:`);
+        alert(name ? `Thanks, ${name}! We'll provide more info in a few seconds.` : 'No name entered.');
+    })
+);
+
     /* =========================
        BOOKING FORM VALIDATION
        (booking.html)
