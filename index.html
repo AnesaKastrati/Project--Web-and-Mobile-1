@@ -7,11 +7,10 @@
     <title>AutoRent - Home</title>
 
     <link rel="stylesheet" href="css-styles.css">
-    <script defer src="js-main.js"></script>
     <!-- END Anesa Kastrati -->
 </head>
 
-<body>
+<body class="anesa-home">
 <!-- BEGIN Anesa Kastrati -->
 
 <!-- Scroll Progress Bar -->
@@ -30,14 +29,12 @@
 </nav>
 
 <!-- HERO -->
-<!-- NEW PREMIUM HERO (Split Layout + Video) -->
 <section class="hero-split">
 
     <!-- Background Video -->
     <video class="hero-split-video" autoplay muted loop playsinline>
-    <source src="video/video 2.mp4" type="video/mp4">
-</video>
-
+        <source src="video/video 2.mp4" type="video/mp4">
+    </video>
 
     <div class="hero-split-content">
 
@@ -67,9 +64,7 @@
         </div>
 
     </div>
-
 </section>
-
 
 <!-- WHY CHOOSE SECTION -->
 <section class="why-choose luxury">
@@ -98,8 +93,6 @@
 
     </div>
 </section>
-
-
 
 <!-- HOW IT WORKS -->
 <section class="how-it-works">
@@ -243,7 +236,6 @@
 </section>
 
 <!-- LOCATION -->
-<!-- LOCATION -->
 <section class="location-section">
     <p class="location-subtitle">Visit Us</p>
     <h2 class="location-title">Our Location</h2>
@@ -251,15 +243,11 @@
     <div class="location-map">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93899.02842017805!2d21.083128758203134!3d42.65405159999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f069911e159%3A0xf2369798b9ee240!2sBill%20Clinton%20Statue!5e0!3m2!1sen!2s!4v1765369472664!5m2!1sen!2s"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            allowfullscreen loading="lazy"></iframe>
     </div>
 
     <button class="location-btn" id="location-book-btn">Book an Appointment</button>
 </section>
-
 
 <!-- FOOTER -->
 <footer class="new-footer">
@@ -317,6 +305,84 @@
 
 <!-- Back to Top Button -->
 <button id="backToTop">↑</button>
+
+<!-- JAVASCRIPT — INDEX PAGE ONLY -->
+<script>
+/* BEGIN Anesa Kastrati */
+
+// SCROLL PROGRESS BAR
+window.addEventListener("scroll", () => {
+    const bar = document.getElementById("scroll-progress");
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docHeight) * 100 + "%";
+});
+
+// NAV ACTIVE LINK
+document.querySelectorAll("nav a").forEach(a => {
+    if (a.href.includes("index.html")) a.classList.add("active");
+});
+
+// CARD ANIMATION
+function revealCards() {
+    document.querySelectorAll(".card").forEach(card => {
+        if (card.getBoundingClientRect().top < window.innerHeight - 120) {
+            card.classList.add("visible");
+        }
+    });
+}
+window.addEventListener("scroll", revealCards);
+revealCards();
+
+// COUNT-UP STATS
+let started = false;
+function startStats() {
+    const stats = document.querySelector(".stats");
+    if (!stats) return;
+
+    if (!started && stats.getBoundingClientRect().top < window.innerHeight) {
+        document.querySelectorAll(".count").forEach(counter => {
+            let target = +counter.dataset.target;
+            let c = 0;
+
+            let interval = setInterval(() => {
+                c++;
+                counter.textContent = c;
+                if (c >= target) clearInterval(interval);
+            }, 20);
+        });
+        started = true;
+    }
+}
+window.addEventListener("scroll", startStats);
+
+// BACK TO TOP BUTTON
+const btn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 400 ? "block" : "none";
+});
+btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// NEWSLETTER FORM
+document.getElementById("newsletter-form")?.addEventListener("submit", e => {
+    e.preventDefault();
+    const email = document.getElementById("newsletter-email").value.trim();
+    const msg = document.getElementById("newsletter-msg");
+
+    if (!email.includes("@")) {
+        msg.textContent = "Please enter a valid email.";
+        msg.style.color = "red";
+    } else {
+        msg.textContent = "Subscribed successfully!";
+        msg.style.color = "green";
+        e.target.reset();
+    }
+});
+
+/* END Anesa Kastrati */
+</script>
 
 <!-- END Anesa Kastrati -->
 </body>
