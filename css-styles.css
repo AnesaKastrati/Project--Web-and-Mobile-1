@@ -122,115 +122,99 @@ nav ul li a.active::after {
 }
 /* END Marigona */
 
-/*  BEGIN Driola  */
-
+/* BEGIN Driola */
 .new-footer {
     background: #000;
     color: white;
-    padding: 70px 20px;
-    margin-top: 80px;
+    padding: 60px 20px;
+    margin-top: 60px;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-
 .footer-top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
 }
 
 .footer-logo h1 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 700;
 }
-
 .footer-logo span {
-    color: #ffca28;
+    color: #4e73df;
 }
-
 
 .footer-details {
     text-align: center;
     flex: 1;
 }
-
 .footer-details p {
     margin-bottom: 8px;
     font-size: 16px;
-    color: #ddd;
 }
 
-/* SOCIAL ICONS */
 .footer-socials {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-top: 14px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .circle {
     width: 42px;
     height: 42px;
-    border-radius: 50%;
-    border: 2px solid #ffca28;
-    color: #ffca28;
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
-
 .circle:hover {
-    background: #ffca28;
-    color: #000;
-    transform: translateY(-4px);
+    background: white;
+    color: black;
 }
-
 
 .footer-contact button {
-    padding: 14px 32px;
+    padding: 14px 30px;
     background: #ffca28;
     color: #000;
     border: none;
-    border-radius: 40px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 16px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
-
 .footer-contact button:hover {
     background: #ffb300;
-    transform: scale(1.05);
 }
 
-/* LINKS SECTION */
 .footer-links-section {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 100px;
     flex-wrap: wrap;
 }
 
 .footer-column h3 {
     font-size: 18px;
     margin-bottom: 12px;
-    color: #ffca28; 
 }
 
 .footer-column ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .footer-column li {
@@ -241,34 +225,106 @@ nav ul li a.active::after {
     color: #ccc;
     text-decoration: none;
     font-size: 15px;
-    transition: 0.3s;
 }
-
 .footer-column a:hover {
-    color: #ffca28;
-    padding-left: 4px;
+    color: #4e73df;
 }
-
-
-.footer-divider {
-    width: 80%;
-    height: 1px;
-    background: #333;
-    margin: 30px auto 20px auto;
-    border: none;
-}
-
 
 .footer-bottom {
     text-align: center;
-    color: #aaa;
-    margin-top: 20px;
-    font-size: 14px;
+    color: #777;
+    margin-top: 40px;
+}
+
+    .team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 
+.team-container {
+    display: flex;          
+    justify-content: center; 
+    gap: 30px;               
+    margin-top: 30px;
+}
+
+.team-card {
+    text-align: center;
+    width: 220px;            
+    padding: 15px;
+    border-radius: 15px;     
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.team-card img {
+    width: 200px;            
+    height: 200px;          
+    object-fit: cover;      
+    border-radius: 15px;    
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.team-card p {
+    color: #555;
+    margin: 0;
+}
+
+
+.info-section p {
+    max-width: 750px;         
+    margin: 10px auto 20px;    
+    font-size: 17px;           
+    line-height: 1.6;         
+    text-align: center;       
+}
+
+.team-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.team-card img:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2); 
+}
+
+.services-list {
+    display: flex;                 
+    justify-content: center;      
+    flex-wrap: wrap;                
+    gap: 20px;                      
+    list-style: none;              
+    padding-left: 0;                
+    margin: 20px auto 40px;
+}
+
+.services-list li {
+    background-color: #f5f5f5;    
+    padding: 15px 20px;
+    border-radius: 12px;            
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    min-width: 180px;              
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: default;               
+}
+
+.services-list li:hover {
+    transform: translateY(-8px);  
+    box-shadow: 0 10px 18px rgba(0,0,0,0.2);
+}
 
 /* END Driola */
+
 /* BEGIN Arbenita  */
 .section-title {
     text-align: center;
