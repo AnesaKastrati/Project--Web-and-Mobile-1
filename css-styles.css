@@ -1,6 +1,4 @@
-/* BEGIN Anesa Kastrati */
-
-/* RESET */
+/* BEGIN Anesa — Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +14,9 @@ body {
     background: #f3f4f7;
     color: #222;
 }
+/* END Anesa */
 
-/* SCROLL PROGRESS BAR */
-#scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    background: #ffca28;
-    width: 0%;
-    z-index: 9999;
-}
-
-/* NAVBAR */
+/* BEGIN Lea — Global Navbar */
 nav {
     width: 100%;
     background: #1d2a4d;
@@ -63,7 +51,6 @@ nav ul li a {
     transition: 0.3s;
 }
 
-/* underline hover */
 nav ul li a::after {
     content: "";
     width: 0%;
@@ -79,7 +66,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* active link */
 nav ul li a.active {
     color: #ffca28;
     font-weight: 600;
@@ -88,47 +74,8 @@ nav ul li a.active {
 nav ul li a.active::after {
     width: 100%;
 }
-
-/* HERO */
-.hero {
-    height: 88vh;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                url("https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 30px;
-}
-
-.hero-inner {
-    text-align: center;
-    color: white;
-    max-width: 900px;
-}
-
-.hero-inner h1 {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.1;
-    animation: fadeDown 1.2s ease;
-}
-
-.hero-inner p {
-    font-size: 22px;
-    margin-top: 12px;
-    opacity: 0.9;
-    animation: fadeUp 1.4s ease;
-}
-
-.hero-actions {
-    margin-top: 35px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* END Lea */
+/* BEGIN Marigona — Global Buttons + Animations */
 .btn-primary,
 .btn-secondary {
     padding: 14px 34px;
@@ -143,7 +90,6 @@ nav ul li a.active::after {
     background: #ffca28;
     color: black;
 }
-
 .btn-primary:hover {
     background: #ffb300;
     transform: scale(1.05);
@@ -154,14 +100,12 @@ nav ul li a.active::after {
     border: 2px solid #ffca28;
     color: white;
 }
-
 .btn-secondary:hover {
     background: #ffca28;
     color: black;
     transform: scale(1.05);
 }
 
-/* FADE ANIMATIONS */
 @keyframes fadeDown {
     0% { opacity: 0; transform: translateY(-30px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -171,8 +115,122 @@ nav ul li a.active::after {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+/* END Marigona */
+/* BEGIN Driola — Global Footer */
+.new-footer {
+    background: #000;
+    color: white;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
 
-/* SECTION TITLES */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.footer-logo span {
+    color: #4e73df;
+}
+
+.footer-details {
+    text-align: center;
+    flex: 1;
+}
+.footer-details p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.circle {
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.circle:hover {
+    background: white;
+    color: black;
+}
+
+.footer-contact button {
+    padding: 14px 30px;
+    background: #ffca28;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.footer-contact button:hover {
+    background: #ffb300;
+}
+
+.footer-links-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+.footer-column a:hover {
+    color: #4e73df;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #777;
+    margin-top: 40px;
+}
+/* END Driola */
+/* BEGIN Arbenita — Global Utility Styles */
 .section-title {
     text-align: center;
     margin-top: 70px;
@@ -181,7 +239,7 @@ nav ul li a.active::after {
     color: #1d2a4d;
 }
 
-/* WHY CHOOSE */
+/* WHY CHOOSE (base) */
 .why-choose {
     width: 90%;
     max-width: 1200px;
@@ -215,44 +273,7 @@ nav ul li a.active::after {
     margin-bottom: 10px;
 }
 
-/* HOW IT WORKS */
-.how-it-works {
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-}
-
-.steps-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.step {
-    text-align: center;
-    width: 28%;
-}
-
-.step-number {
-    width: 55px;
-    height: 55px;
-    background: #ffca28;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0 auto 10px;
-}
-
-.step-line {
-    width: 60px;
-    height: 4px;
-    background: #1d2a4d;
-}
-
-/* VEHICLE CARDS */
+/* CARDS (global structure) */
 .cards {
     display: flex;
     justify-content: center;
@@ -277,24 +298,374 @@ nav ul li a.active::after {
     transform: translateY(0);
 }
 
-.card img {
+/* STATS */
+.stats {
+    background: #1d2a4d;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 50px;
+}
+
+/* Newsletter */
+.newsletter {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* Location Section */
+.location-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* END Arbenita */
+/* BEGIN Anesa — Index Page */
+
+/* Hero Split */
+.anesa-home .hero-split {
+    position: relative;
     width: 100%;
-    height: 200px;
+    height: 92vh;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.anesa-home .hero-split-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%) blur(1px);
+}
+
+.anesa-home .hero-split-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+
+/* Hero Typography */
+.anesa-home .hero-left h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.anesa-home .hero-subtext {
+    color: #e8e8e8;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    max-width: 420px;
+}
+
+/* Hero Buttons */
+.anesa-home .hero-btn-primary {
+    background: #ffca28;
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 25px;
+    margin-right: 12px;
+    transition: 0.3s ease;
+}
+.anesa-home .hero-btn-primary:hover {
+    background: #ffb300;
+}
+
+.anesa-home .hero-btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.anesa-home .hero-btn-secondary:hover {
+    background: white;
+    color: black;
+}
+
+/* Floating Box */
+.anesa-home .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anesa-home .floating-box {
+    width: 340px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
+    animation: float 4s ease-in-out infinite;
+}
+
+.anesa-home .floating-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* Why Choose (Luxury Variant) */
+.anesa-home .luxury-box {
+    border-left: 6px solid gold;
+}
+
+/* Testimonials */
+.anesa-home .testimonial-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Stats Section */
+.anesa-home .stats {
+    margin-top: 40px;
+}
+
+/* Offers */
+.anesa-home .offers {
+    margin: 50px auto;
+}
+
+/* Location Section */
+.anesa-home .location-btn:hover {
+    background: #ffca28;
+    color: #000;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .anesa-home .hero-split-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding-top: 40px;
+    }
+
+    .anesa-home .hero-right {
+        display: none;
+    }
+
+    .anesa-home .hero-left h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* END Anesa */
+/* BEGIN Lea — Vehicles Page */
+
+/* Sub-Hero Section */
+.lea-vehicles .sub-hero {
+    background: #1d2a4d;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* Info Section */
+.lea-vehicles .info-section {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Cards — Vehicles Page */
+.lea-vehicles .cards {
+    padding-top: 30px;
+}
+
+.lea-vehicles .card img {
+    height: 220px;
     object-fit: cover;
 }
 
-.card h3 {
-    padding: 20px;
-    font-size: 24px;
-    color: #1d2a4d;
+/* END Lea */
+/* BEGIN Marigona — Booking Page */
+
+/* Booking Form Section */
+.marigona-booking .form-section {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.card p {
-    padding: 0 20px 20px;
-    color: #555;
+.marigona-booking #booking-form .form-group {
+    margin-bottom: 18px;
 }
 
-/* TESTIMONIALS */
+.marigona-booking #booking-form input,
+.marigona-booking #booking-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #1d2a4d;
+}
+
+.marigona-booking .form-inline {
+    display: flex;
+    gap: 20px;
+}
+
+/* Messages */
+.marigona-booking #booking-message {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* END Marigona */
+/* BEGIN Driola — About Page */
+
+/* About Hero */
+.driola-about .hero.small-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Info Sections */
+.driola-about .info-section {
+    max-width: 900px;
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+/* Services List */
+.driola-about .services-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* END Driola */
+/* BEGIN Arbenita — Contact Page */
+
+/* Contact Info Section */
+.arbenita-contact .contact-details {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.arbenita-contact .form-section {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.arbenita-contact #contact-form input,
+.arbenita-contact #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #1d2a4d;
+}
+
+.arbenita-contact #contact-message-box {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* END Arbenita */
+/* ===== SHARED ROOT STYLES (Owned by Anesa) ===== */
+/* BEGIN Anesa — Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #ffca28;
+    width: 0%;
+    z-index: 9999;
+}
+/* END Anesa */
+/* BEGIN Anesa — Global Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 14px 34px;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #ffca28;
+    color: black;
+}
+.btn-primary:hover {
+    background: #ffb300;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #ffca28;
+    color: white;
+}
+.btn-secondary:hover {
+    background: #ffca28;
+    color: black;
+    transform: scale(1.05);
+}
+/* END Anesa */
+/* BEGIN Anesa — Card Animation */
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.4s ease;
+}
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* END Anesa */
+/* BEGIN Anesa — Testimonials */
 .testimonials {
     width: 90%;
     max-width: 1200px;
@@ -318,7 +689,6 @@ nav ul li a.active::after {
     box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
-
 .testimonial-card:hover {
     transform: translateY(-6px);
 }
@@ -328,8 +698,8 @@ nav ul li a.active::after {
     font-size: 20px;
     margin-bottom: 10px;
 }
-
-/* FAQ */
+/* END Anesa */
+/* BEGIN Anesa — FAQ */
 .faq {
     width: 90%;
     max-width: 900px;
@@ -354,8 +724,8 @@ nav ul li a.active::after {
     border-radius: 0 0 8px 8px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
-
-/* STATS */
+/* END Anesa */
+/* BEGIN Anesa — Stats Counter */
 .stats {
     background: #1d2a4d;
     color: white;
@@ -366,19 +736,14 @@ nav ul li a.active::after {
     flex-wrap: wrap;
 }
 
-.stat {
-    text-align: center;
-}
-
 .stat h3 {
     font-size: 50px;
 }
-
 .stat p {
     margin-top: 8px;
 }
-
-/* OFFERS */
+/* END Anesa */
+/* BEGIN Anesa — Offers */
 .offers {
     width: 90%;
     max-width: 1200px;
@@ -401,359 +766,7 @@ nav ul li a.active::after {
     box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
-
 .offer:hover {
     transform: translateY(-7px);
 }
-
-/* TRUSTED BRANDS */
-.brands {
-    margin: 50px auto;
-    text-align: center;
-}
-
-.brand-logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.brand {
-    background: white;
-    padding: 18px 28px;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-}
-
-/* NEWSLETTER */
-.newsletter {
-    width: 90%;
-    max-width: 700px;
-    margin: 60px auto;
-    text-align: center;
-}
-
-.newsletter input {
-    width: 70%;
-    padding: 12px;
-    border-radius: 30px;
-    border: 2px solid #1d2a4d;
-}
-
-.newsletter button {
-    padding: 12px 25px;
-    border-radius: 30px;
-    background: #1d2a4d;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* LOCATION */
-.location-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 80px auto;
-    text-align: center;
-}
-
-.location-section h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #1d2a4d;
-}
-
-.location-map iframe {
-    width: 100%;
-    height: 350px;
-    border-radius: 14px;
-    background: #eee;
-}
-
-.location-btn {
-    margin-top: 20px;
-    padding: 12px 32px;
-    background: #1d2a4d;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.location-btn:hover {
-    background: #ffca28;
-    color: #000;
-}
-
-/* FOOTER */
-/* FOOTER - FIXED, CENTERED & BALANCED */
-/* FOOTER - FIXED, CENTERED & BALANCED */
-/* FOOTER */
-.new-footer {
-    background: #000;
-    color: white;
-    padding: 60px 20px;
-    margin-top: 60px;
-}
-
-/* CONTAINER TO CENTER AND LIMIT WIDTH */
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* TOP SECTION */
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #222;
-}
-
-/* LOGO */
-.footer-logo h1 {
-    font-size: 32px;
-    font-weight: 700;
-}
-.footer-logo span {
-    color: #4e73df;
-}
-
-/* ADDRESS + SOCIALS */
-.footer-details {
-    text-align: center;
-    flex: 1;
-}
-.footer-details p {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-.circle {
-    width: 42px;
-    height: 42px;
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.circle:hover {
-    background: white;
-    color: black;
-}
-
-/* CONTACT BUTTON */
-.footer-contact button {
-    padding: 14px 30px;
-    background: #ffca28;
-    color: #000;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.footer-contact button:hover {
-    background: #ffb300;
-}
-
-/* LINK COLUMNS */
-.footer-links-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    flex-wrap: wrap;
-}
-
-.footer-column h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer-column li {
-    margin-bottom: 8px;
-}
-
-.footer-column a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 15px;
-}
-.footer-column a:hover {
-    color: #4e73df;
-}
-
-/* COPYRIGHT */
-.footer-bottom {
-    text-align: center;
-    color: #777;
-    margin-top: 40px;
-}
-/* SPORTY WHY-CHOOSE STYLE */
-.sporty .why-box {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 35px;
-    border-left: 6px solid #ff4d4d;
-    transition: 0.3s ease;
-}
-
-.sporty .why-box:hover {
-    transform: translateY(-6px);
-}
-
-.sporty-icon {
-    font-size: 40px;
-    color: #ff4d4d;
-}
-
-/* ============ NEW SPLIT HERO LAYOUT ============ */
-
-.hero-split {
-    position: relative;
-    width: 100%;
-    height: 92vh;
-    border-radius: 18px;
-    overflow: hidden;
-    margin-top: 15px;
-}
-
-/* Background video */
-.hero-split-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(55%) blur(1px);
-}
-
-/* Content wrapper */
-.hero-split-content {
-    position: relative;
-    z-index: 3;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 7%;
-}
-
-/* LEFT SIDE */
-.hero-left h1 {
-    font-size: 3.4rem;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1.1;
-}
-
-.hero-subtext {
-    color: #e8e8e8;
-    font-size: 1.2rem;
-    margin-top: 12px;
-    max-width: 420px;
-}
-
-/* Buttons */
-.hero-btn-primary {
-    background: #ffca28;
-    color: #000;
-    padding: 14px 30px;
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 25px;
-    margin-right: 12px;
-    transition: 0.3s ease;
-}
-
-.hero-btn-primary:hover {
-    background: #ffb300;
-}
-
-.hero-btn-secondary {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 40px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.hero-btn-secondary:hover {
-    background: white;
-    color: black;
-}
-
-/* RIGHT SIDE (floating 3D-style box) */
-.hero-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.floating-box {
-    width: 340px;
-    height: 420px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(18px);
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
-    animation: float 4s ease-in-out infinite;
-}
-
-.floating-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0); }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 900px) {
-    .hero-split-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding-top: 40px;
-    }
-
-    .hero-right {
-        display: none;
-    }
-
-    .hero-left h1 {
-        font-size: 2.4rem;
-    }
-}
+/* END Anesa */
