@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- BEGIN Anesa Kastrati -->
+    <!-- BEGIN Driola -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us – AutoRent</title>
 
     <link rel="stylesheet" href="css-styles.css">
-    <script defer src="js-main.js"></script>
-    <!-- END Anesa Kastrati -->
+    <!-- END Driola -->
 </head>
 
-<body>
-<!-- BEGIN Anesa Kastrati -->
+<body class="driola-about">
+<!-- BEGIN Driola -->
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -54,7 +53,7 @@
     </p>
 </section>
 
-<!-- SERVICES (MERGED HERE) -->
+<!-- SERVICES -->
 <section class="info-section">
     <h2 class="section-title">Our Services</h2>
     <p>We offer a variety of rental solutions designed to fit any lifestyle or travel purpose:</p>
@@ -89,7 +88,7 @@
     </p>
 
     <div class="location-map">
-        <iframe 
+        <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2799637702583!2d21.150475008628867!3d42.65542229803765"
             allowfullscreen loading="lazy">
         </iframe>
@@ -142,11 +141,40 @@
         </div>
     </div>
 
-    <p class="footer-bottom">© 2025 AutoRent — Created by Anesa Kastrati</p>
+    <p class="footer-bottom">© 2025 AutoRent — Created by Driola</p>
 </footer>
 
 <button id="backToTop">↑</button>
 
-<!-- END Anesa Kastrati -->
+<!-- JAVASCRIPT — ABOUT PAGE -->
+<script>
+/* BEGIN Driola */
+
+// SCROLL BAR
+window.addEventListener("scroll", () => {
+    const bar = document.getElementById("scroll-progress");
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docHeight) * 100 + "%";
+});
+
+// NAV HIGHLIGHT
+document.querySelectorAll("nav a").forEach(a => {
+    if (a.href.includes("about.html")) a.classList.add("active");
+});
+
+// BACK TO TOP
+const btn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 400 ? "block" : "none";
+});
+btn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+
+/* END Driola */
+</script>
+
+<!-- END Driola -->
 </body>
 </html>
