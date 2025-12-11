@@ -1,18 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <!-- BEGIN Anesa Kastrati -->
+    <!-- BEGIN Lea -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoRent - Vehicles</title>
 
     <link rel="stylesheet" href="css-styles.css">
-    <script defer src="js-main.js"></script>
-    <!-- END Anesa Kastrati -->
+    <!-- END Lea -->
 </head>
 
-<body>
-<!-- BEGIN Anesa Kastrati -->
+<body class="lea-vehicles">
+<!-- BEGIN Lea -->
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -71,7 +70,8 @@
 
 <section class="info-section narrow">
     <p>
-        Need help choosing a vehicle? Visit our <a class="inline-link" href="contact.html">Contact</a> page or 
+        Need help choosing a vehicle? Visit our 
+        <a class="inline-link" href="contact.html">Contact</a> page or 
         head to the <a class="inline-link" href="booking.html">Booking</a> page to reserve your car.
     </p>
 </section>
@@ -119,12 +119,52 @@
         </div>
     </div>
 
-    <p class="footer-bottom">© 2025 AutoRent — Created by Anesa Kastrati</p>
+    <p class="footer-bottom">© 2025 AutoRent — Created by Lea</p>
 </footer>
 
 <!-- Back to Top -->
 <button id="backToTop">↑</button>
 
-<!-- END Anesa Kastrati -->
+<!-- JAVASCRIPT — VEHICLES PAGE -->
+<script>
+/* BEGIN Lea */
+
+// SCROLL PROGRESS BAR
+window.addEventListener("scroll", () => {
+    const bar = document.getElementById("scroll-progress");
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docHeight) * 100 + "%";
+});
+
+// NAV ACTIVE LINK
+document.querySelectorAll("nav a").forEach(a => {
+    if (a.href.includes("vehicles.html")) a.classList.add("active");
+});
+
+// CARD ANIMATION
+function revealCards() {
+    document.querySelectorAll(".card").forEach(card => {
+        if (card.getBoundingClientRect().top < window.innerHeight - 120) {
+            card.classList.add("visible");
+        }
+    });
+}
+window.addEventListener("scroll", revealCards);
+revealCards();
+
+// BACK TO TOP BUTTON
+const btn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 400 ? "block" : "none";
+});
+btn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+
+/* END Lea */
+</script>
+
+<!-- END Lea -->
 </body>
 </html>
