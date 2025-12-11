@@ -206,7 +206,6 @@ li {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
     color: white;
     margin-top: 20px;
     background-color: #1d2a4d;
@@ -214,6 +213,7 @@ footer {
 
 
 /* END Lea */
+
 /* BEGIN Marigona — Global Buttons + Animations */
 .btn-primary,
 .btn-secondary {
