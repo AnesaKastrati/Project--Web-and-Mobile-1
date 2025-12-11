@@ -1,192 +1,184 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- BEGIN Arbenita -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – AutoRent</title>
-
+    <title>Contact – Ulpiana Cars</title>
     <link rel="stylesheet" href="css-styles.css">
-    <!-- END Arbenita -->
 </head>
 
 <body class="arbenita-contact">
-<!-- BEGIN Arbenita -->
 
-<!-- Scroll Progress Bar -->
-<div id="scroll-progress"></div>
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
 
-<!-- NAVIGATION -->
-<nav>
-    <div class="logo">AutoRent</div>
-    <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="vehicles.html">Vehicles</a></li>
-        <li><a class="nav-link" href="booking.html">Booking</a></li>
-        <li><a class="nav-link" href="about.html">About</a></li>
-        <li><a class="nav-link active" href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo"></div>
+        <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+            <li><a class="nav-link" href="booking.html">Booking</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- HERO -->
-<section class="hero small-hero">
-    <h1>Contact Us</h1>
-    <p>We’re here to help with bookings, questions, and support.</p>
-</section>
+    <!-- HERO / BANNER -->
+    <section class="hero small-hero">
+        <div class="logo">Ulpiana Cars</div>
+        <h1>Contact Us</h1>
+        <p>We’re here to help with bookings, questions, and support.</p>
+    </section>
 
-<!-- CONTACT INFO -->
-<section class="info-section">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>
-        Whether you have questions about our vehicles, need help with a booking,
-        or simply want more details about our services — we are here for you.
-    </p>
-
-    <div class="contact-details">
-        <p><strong>📍 Address:</strong> 123 Premium Road, New York, NY</p>
-        <p><strong>📞 Phone:</strong> +1 (555) 123-4567</p>
-        <p><strong>📧 Email:</strong> support@autorent.com</p>
-        <p><strong>🕒 Hours:</strong> Mon–Sun: 8:00 AM – 10:00 PM</p>
-    </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="form-section">
-    <h2 class="section-title">Send Us a Message</h2>
-
-    <form id="contact-form" novalidate>
-        <div class="form-group">
-            <label for="contact-name">Full Name</label>
-            <input type="text" id="contact-name" placeholder="Enter your full name">
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Whether you have questions about our vehicles, need help with a booking, or want more details — we are
+                here for you.</p>
+            <ul>
+                <li>📍 Address: 123 Main Street, Pristina, Kosovo</li>
+                <li>📞 Phone: +383 44 123 456</li>
+                <li>📧 Email: support@ulpianacars.com</li>
+                <li>🕒 Hours: Mon–Sun 8:00 AM – 10:00 PM</li>
+            </ul>
         </div>
 
-        <div class="form-group">
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" placeholder="you@example.com">
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="contact-name">Full Name</label>
+                    <input type="text" id="contact-name" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" rows="5" placeholder="Write your message..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary wide">Send Message</button>
+                <div id="contact-message-box" class="form-message"></div>
+            </form>
         </div>
+    </section>
 
-        <div class="form-group">
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" rows="5" placeholder="Write your message..."></textarea>
+    <!-- LOCATION MAP -->
+    <section class="location-section">
+        <p class="location-subtitle">Visit Us</p>
+        <h2 class="location-title">Our Office Location</h2>
+
+        <div class="location-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2799637702583!2d21.150475008628867!3d42.65542229803765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f069911e159%3A0xf2369798b9ee240!2sBill%20Clinton%20Statue!5e0!3m2!1sen!2s!4v1765369472664!5m2!1sen!2s"
+                allowfullscreen loading="lazy">
+            </iframe>
         </div>
+    </section>
 
-        <button type="submit" class="btn-primary wide">Send Message</button>
-        <div id="contact-message-box" class="form-message"></div>
-    </form>
-</section>
+    <!-- FOOTER -->
+    <footer class="new-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <h1>Ulpiana<span>Cars</span></h1>
+            </div>
 
-<!-- LOCATION -->
-<section class="location-section">
-    <p class="location-subtitle">Visit Us</p>
-    <h2 class="location-title">Our Office Location</h2>
+            <div class="footer-details">
+                <p>123 Main Street, Pristina, Kosovo</p>
+                <p>Phone: +383 44 123 456</p>
 
-    <div class="location-map">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2799637702583!2d21.150475008628867!3d42.65542229803765"
-            allowfullscreen loading="lazy">
-        </iframe>
-    </div>
-</section>
+                <div class="footer-socials">
+                    <div class="circle">f</div>
+                    <div class="circle">IG</div>
+                    <div class="circle">X</div>
+                </div>
+            </div>
 
-<!-- FOOTER -->
-<footer class="new-footer">
-
-    <div class="footer-top">
-        <div class="footer-logo">
-            <h1>Auto<span>Rent</span></h1>
-        </div>
-
-        <div class="footer-details">
-            <p>123 Premium Road, New York, NY</p>
-            <p>Phone: +1 (555) 123-4567</p>
-
-            <div class="footer-socials">
-                <div class="circle">f</div>
-                <div class="circle">IG</div>
-                <div class="circle">X</div>
+            <div class="footer-contact">
+                <button onclick="location.href='contact.html'">Contact Us</button>
             </div>
         </div>
 
-        <div class="footer-contact">
-            <button onclick="location.href='contact.html'">Contact Us</button>
+        <div class="footer-links-section">
+            <div class="footer-column">
+                <h3>About ▼</h3>
+                <ul>
+                    <li><a href="about.html">Company Info</a></li>
+                    <li><a href="about.html">Our Team</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Vehicles ▼</h3>
+                <ul>
+                    <li><a href="vehicles.html">Luxury Cars</a></li>
+                    <li><a href="vehicles.html">SUVs</a></li>
+                    <li><a href="vehicles.html">Convertibles</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="footer-links-section">
-        <div class="footer-column">
-            <h3>About ▼</h3>
-            <ul>
-                <li><a href="about.html">Company Info</a></li>
-                <li><a href="about.html">Our Team</a></li>
-                <li><a href="about.html">Careers</a></li>
-            </ul>
-        </div>
+        <p class="footer-bottom">©️ 2025 Ulpiana Cars — Created by Your Team</p>
+    </footer>
 
-        <div class="footer-column">
-            <h3>Vehicles ▼</h3>
-            <ul>
-                <li><a href="vehicles.html">Luxury Cars</a></li>
-                <li><a href="vehicles.html">SUVs</a></li>
-                <li><a href="vehicles.html">Convertibles</a></li>
-            </ul>
-        </div>
-    </div>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop">↑</button>
 
-    <p class="footer-bottom">© 2025 AutoRent — Created by Arbenita</p>
-</footer>
+    <!-- JAVASCRIPT -->
+    <script>
+        // SCROLL PROGRESS BAR
+        window.addEventListener("scroll", () => {
+            const bar = document.getElementById("scroll-progress");
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = (scrollTop / docHeight) * 100 + "%";
+        });
 
-<button id="backToTop">↑</button>
+        // NAV HIGHLIGHT
+        document.querySelectorAll("nav a").forEach(a => {
+            if (a.href.includes("contact.html")) a.classList.add("active");
+        });
 
-<!-- JAVASCRIPT — CONTACT PAGE -->
-<script>
-/* BEGIN Arbenita */
+        // CONTACT FORM
+        document.getElementById("contact-form")?.addEventListener("submit", e => {
+            e.preventDefault();
 
-// SCROLL BAR
-window.addEventListener("scroll", () => {
-    const bar = document.getElementById("scroll-progress");
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (scrollTop / docHeight) * 100 + "%";
-});
+            const name = document.getElementById("contact-name").value.trim();
+            const email = document.getElementById("contact-email").value.trim();
+            const message = document.getElementById("contact-message").value.trim();
+            const msg = document.getElementById("contact-message-box");
 
-// NAV HIGHLIGHT
-document.querySelectorAll("nav a").forEach(a => {
-    if (a.href.includes("contact.html")) a.classList.add("active");
-});
+            msg.style.color = "red";
+            if (!name) return msg.textContent = "Please enter your name.";
+            if (!email.includes("@")) return msg.textContent = "Enter a valid email.";
+            if (message.length < 10) return msg.textContent = "Message must be at least 10 characters.";
 
-// CONTACT FORM
-document.getElementById("contact-form")?.addEventListener("submit", e => {
-    e.preventDefault();
+            msg.style.color = "green";
+            msg.textContent = "Message sent successfully!";
+            e.target.reset();
+        });
 
-    const name = document.getElementById("contact-name").value.trim();
-    const email = document.getElementById("contact-email").value.trim();
-    const message = document.getElementById("contact-message").value.trim();
+        // BACK TO TOP BUTTON
+        const btn = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            btn.style.display = window.scrollY > 400 ? "block" : "none";
+        });
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
 
-    const msg = document.getElementById("contact-message-box");
-    msg.style.color = "red";
-
-    if (!name) return msg.textContent = "Please enter your name.";
-    if (!email.includes("@")) return msg.textContent = "Enter a valid email.";
-    if (message.length < 10) return msg.textContent = "Message must be at least 10 characters.";
-
-    msg.style.color = "green";
-    msg.textContent = "Message sent successfully!";
-    e.target.reset();
-});
-
-// BACK TO TOP
-const btn = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-    btn.style.display = window.scrollY > 400 ? "block" : "none";
-});
-btn.addEventListener("click", () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
-});
-
-/* END Arbenita */
-</script>
-
-<!-- END Arbenita -->
 </body>
+
 </html>
+
