@@ -1,18 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- BEGIN Anesa Kastrati -->
+    <!-- BEGIN Arbenita -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact – AutoRent</title>
 
     <link rel="stylesheet" href="css-styles.css">
-    <script defer src="js-main.js"></script>
-    <!-- END Anesa Kastrati -->
+    <!-- END Arbenita -->
 </head>
 
-<body>
-<!-- BEGIN Anesa Kastrati -->
+<body class="arbenita-contact">
+<!-- BEGIN Arbenita -->
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -133,11 +133,60 @@
         </div>
     </div>
 
-    <p class="footer-bottom">© 2025 AutoRent — Created by Anesa Kastrati</p>
+    <p class="footer-bottom">© 2025 AutoRent — Created by Arbenita</p>
 </footer>
 
 <button id="backToTop">↑</button>
 
-<!-- END Anesa Kastrati -->
+<!-- JAVASCRIPT — CONTACT PAGE -->
+<script>
+/* BEGIN Arbenita */
+
+// SCROLL BAR
+window.addEventListener("scroll", () => {
+    const bar = document.getElementById("scroll-progress");
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docHeight) * 100 + "%";
+});
+
+// NAV HIGHLIGHT
+document.querySelectorAll("nav a").forEach(a => {
+    if (a.href.includes("contact.html")) a.classList.add("active");
+});
+
+// CONTACT FORM
+document.getElementById("contact-form")?.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
+    const message = document.getElementById("contact-message").value.trim();
+
+    const msg = document.getElementById("contact-message-box");
+    msg.style.color = "red";
+
+    if (!name) return msg.textContent = "Please enter your name.";
+    if (!email.includes("@")) return msg.textContent = "Enter a valid email.";
+    if (message.length < 10) return msg.textContent = "Message must be at least 10 characters.";
+
+    msg.style.color = "green";
+    msg.textContent = "Message sent successfully!";
+    e.target.reset();
+});
+
+// BACK TO TOP
+const btn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 400 ? "block" : "none";
+});
+btn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+
+/* END Arbenita */
+</script>
+
+<!-- END Arbenita -->
 </body>
 </html>
