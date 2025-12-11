@@ -1,24 +1,18 @@
-<!-- BEGIN Marigona -->
+<!--MARIGONA KASTRATI BEGINS-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoRent - Booking</title>
-
+    <title>Ulpiana Cars - Booking</title>
     <link rel="stylesheet" href="css-styles.css">
-    <script defer src="js-main.js"></script>
-   
 </head>
-
 <body>
 
 <div id="scroll-progress"></div>
 
-
 <nav>
-    <div class="logo">AutoRent</div>
+    <div class="logo">Ulpiana Cars</div>
     <ul>
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="vehicles.html">Vehicles</a></li>
@@ -27,6 +21,7 @@
         <li><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
 </nav>
+
 <div class="marigona-booking">
     <section class="sub-hero">
         <h1>Book Your Vehicle</h1>
@@ -208,7 +203,7 @@ function goToStep4() {
         return;
     }
 
-    
+    //Used ChatGPT to assist me 
     var pickupDate = document.getElementById("pickup-date").value;
     var dropoffDate = document.getElementById("dropoff-date").value;
     var days = 1;
@@ -246,57 +241,8 @@ function finishBooking() {
 
 document.getElementById("stepIndicator1").className = "step active-step";
 </script>
-<!--MARIGONA KASTRATI END-->
-   
-<!-- FOOTER -->
-<footer class="new-footer">
-    <div class="footer-top">
 
-        <div class="footer-logo">
-            <h1>Auto<span>Rent</span></h1>
-        </div>
-
-        <div class="footer-details">
-            <p>123 Premium Road, New York, NY</p>
-            <p>Phone: +1 (555) 123-4567</p>
-
-            <div class="footer-socials">
-                <div class="circle">f</div>
-                <div class="circle">IG</div>
-                <div class="circle">X</div>
-            </div>
-        </div>
-
-        <div class="footer-contact">
-            <button onclick="location.href='contact.html'">Contact Us</button>
-        </div>
-    </div>
-
-    <div class="footer-links-section">
-        <div class="footer-column">
-            <h3>About ▼</h3>
-            <ul>
-                <li><a href="about.html">Company Info</a></li>
-                <li><a href="about.html">Our Team</a></li>
-                <li><a href="about.html">Careers</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Vehicles ▼</h3>
-            <ul>
-                <li><a href="vehicles.html">Luxury Cars</a></li>
-                <li><a href="vehicles.html">SUVs</a></li>
-                <li><a href="vehicles.html">Convertibles</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <p class="footer-bottom">© 2025 AutoRent — Created by Anesa Kastrati</p>
-</footer>
-
-<button id="backToTop">↑</button>
-
-<!-- END Anesa Kastrati -->
 </body>
 </html>
+
+<!--MARIGONA KASTRATI END-->
