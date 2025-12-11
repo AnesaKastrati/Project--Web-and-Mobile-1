@@ -1,17 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- BEGIN Lea -->
+    <!-- BEGIN Marigona -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoRent - Vehicles</title>
+    <title>AutoRent - Booking</title>
 
     <link rel="stylesheet" href="css-styles.css">
-    <!-- END Lea -->
+    <!-- END Marigona -->
 </head>
 
-<body class="lea-vehicles">
-<!-- BEGIN Lea -->
+<body class="marigona-booking">
+<!-- BEGIN Marigona -->
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -21,64 +21,81 @@
     <div class="logo">AutoRent</div>
     <ul>
         <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link active" href="vehicles.html">Vehicles</a></li>
-        <li><a class="nav-link" href="booking.html">Booking</a></li>
+        <li><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+        <li><a class="nav-link active" href="booking.html">Booking</a></li>
         <li><a class="nav-link" href="about.html">About</a></li>
         <li><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="sub-hero">
-    <h1>Our Vehicle Fleet</h1>
-    <p>Choose the perfect car for your next adventure.</p>
+    <h1>Book Your Vehicle</h1>
+    <p>Select your dates, time, and vehicle type to get started.</p>
 </section>
 
-<section class="info-section narrow">
-    <p>
-        From compact city cars to luxury SUVs, AutoRent offers a wide selection of vehicles to meet every need.
-        Browse our most popular options below.
-    </p>
-</section>
+<!-- BOOKING FORM -->
+<section class="form-section">
+    <form id="booking-form" novalidate>
 
-<!-- VEHICLE CARDS -->
-<div class="cards">
-    <div class="card">
-        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Luxury Sedan">
-        <h3>Luxury Sedan</h3>
-        <p>Perfect for business trips and long-distance travel. From $69/day.</p>
-    </div>
+        <div class="form-group">
+            <label for="booking-name">Full Name</label>
+            <input type="text" id="booking-name" placeholder="Enter your full name" required>
+        </div>
 
-    <div class="card">
-        <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" alt="SUV">
-        <h3>Family SUV</h3>
-        <p>Spacious and safe for families. From $79/day.</p>
-    </div>
+        <div class="form-group">
+            <label for="booking-email">Email</label>
+            <input type="email" id="booking-email" placeholder="you@example.com" required>
+        </div>
 
-    <div class="card">
-        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" alt="Convertible">
-        <h3>Convertible</h3>
-        <p>Perfect for sunny weekends and scenic drives. From $89/day.</p>
-    </div>
+        <div class="form-group">
+            <label for="booking-vehicle">Vehicle Type</label>
+            <select id="booking-vehicle" required>
+                <option value="">Select a vehicle</option>
+                <option value="Luxury Sedan">Luxury Sedan</option>
+                <option value="Family SUV">Family SUV</option>
+                <option value="Convertible">Convertible</option>
+                <option value="City Compact">City Compact</option>
+            </select>
+        </div>
 
-    <div class="card">
-        <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg" alt="Compact Car">
-        <h3>City Compact</h3>
-        <p>Easy to park and fuel efficient. From $39/day.</p>
-    </div>
-</div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="booking-start-date">Start Date</label>
+                <input type="date" id="booking-start-date" required>
+            </div>
 
-<section class="info-section narrow">
-    <p>
-        Need help choosing a vehicle? Visit our 
-        <a class="inline-link" href="contact.html">Contact</a> page or 
-        head to the <a class="inline-link" href="booking.html">Booking</a> page to reserve your car.
-    </p>
+            <div class="form-group">
+                <label for="booking-end-date">End Date</label>
+                <input type="date" id="booking-end-date" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="booking-time">Pickup Time</label>
+            <input type="time" id="booking-time" required>
+        </div>
+
+        <div class="form-group">
+            <label>Extras</label>
+            <div class="checkbox-row">
+                <label><input type="checkbox" value="GPS"> GPS</label>
+                <label><input type="checkbox" value="Child Seat"> Child Seat</label>
+                <label><input type="checkbox" value="Additional Driver"> Additional Driver</label>
+            </div>
+        </div>
+
+        <button class="btn-primary wide" type="submit">Confirm Booking</button>
+
+        <div id="booking-message" class="form-message"></div>
+
+    </form>
 </section>
 
 <!-- FOOTER -->
 <footer class="new-footer">
     <div class="footer-top">
+
         <div class="footer-logo">
             <h1>Auto<span>Rent</span></h1>
         </div>
@@ -95,7 +112,7 @@
         </div>
 
         <div class="footer-contact">
-            <button onclick="window.location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
         </div>
     </div>
 
@@ -119,17 +136,16 @@
         </div>
     </div>
 
-    <p class="footer-bottom">© 2025 AutoRent — Created by Lea</p>
+    <p class="footer-bottom">© 2025 AutoRent — Created by Marigona</p>
 </footer>
 
-<!-- Back to Top -->
 <button id="backToTop">↑</button>
 
-<!-- JAVASCRIPT — VEHICLES PAGE -->
+<!-- JAVASCRIPT — BOOKING PAGE -->
 <script>
-/* BEGIN Lea */
+/* BEGIN Marigona */
 
-// SCROLL PROGRESS BAR
+// SCROLL BAR
 window.addEventListener("scroll", () => {
     const bar = document.getElementById("scroll-progress");
     const scrollTop = window.scrollY;
@@ -137,21 +153,37 @@ window.addEventListener("scroll", () => {
     bar.style.width = (scrollTop / docHeight) * 100 + "%";
 });
 
-// NAV ACTIVE LINK
+// NAV HIGHLIGHT
 document.querySelectorAll("nav a").forEach(a => {
-    if (a.href.includes("vehicles.html")) a.classList.add("active");
+    if (a.href.includes("booking.html")) a.classList.add("active");
 });
 
-// CARD ANIMATION
-function revealCards() {
-    document.querySelectorAll(".card").forEach(card => {
-        if (card.getBoundingClientRect().top < window.innerHeight - 120) {
-            card.classList.add("visible");
-        }
-    });
-}
-window.addEventListener("scroll", revealCards);
-revealCards();
+// FORM VALIDATION
+document.getElementById("booking-form")?.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const name = document.getElementById("booking-name").value.trim();
+    const email = document.getElementById("booking-email").value.trim();
+    const vehicle = document.getElementById("booking-vehicle").value;
+    const start = document.getElementById("booking-start-date").value;
+    const end = document.getElementById("booking-end-date").value;
+    const time = document.getElementById("booking-time").value;
+
+    const msg = document.getElementById("booking-message");
+    msg.style.color = "red";
+
+    if (name.length < 2) return msg.textContent = "Please enter your full name.";
+    if (!email.includes("@")) return msg.textContent = "Enter a valid email.";
+    if (!vehicle) return msg.textContent = "Select a vehicle.";
+    if (!start) return msg.textContent = "Choose a start date.";
+    if (!end) return msg.textContent = "Choose an end date.";
+    if (start > end) return msg.textContent = "End date must be after start date.";
+    if (!time) return msg.textContent = "Select pickup time.";
+
+    msg.style.color = "green";
+    msg.textContent = "Booking successful! We will email you shortly.";
+    e.target.reset();
+});
 
 // BACK TO TOP BUTTON
 const btn = document.getElementById("backToTop");
@@ -162,9 +194,9 @@ btn.addEventListener("click", () => {
     window.scrollTo({top: 0, behavior: "smooth"});
 });
 
-/* END Lea */
+/* END Marigona */
 </script>
 
-<!-- END Lea -->
+<!-- END Marigona -->
 </body>
 </html>
