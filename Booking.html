@@ -1,18 +1,18 @@
+<!-- BEGIN Anesa Kastrati -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- BEGIN Anesa Kastrati -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoRent - Booking</title>
 
     <link rel="stylesheet" href="css-styles.css">
     <script defer src="js-main.js"></script>
-    <!-- END Anesa Kastrati -->
+   
 </head>
 
 <body>
-<!-- BEGIN Anesa Kastrati -->
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -28,71 +28,229 @@
         <li><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
 </nav>
+ <!-- END Anesa Kastrati -->
+<!--MARIGONA KASTRATI BEGINS-->
+<div class="marigona-booking">
+    <section class="sub-hero">
+        <h1>Book Your Vehicle</h1>
+        <p>Select your dates, time, and vehicle type to get started.</p>
+    </section>
+</div>
 
-<!-- HERO -->
-<section class="sub-hero">
-    <h1>Book Your Vehicle</h1>
-    <p>Select your dates, time, and vehicle type to get started.</p>
+<div class="container">
+
+    <div class="steps">
+        <div class="step active-step" id="stepIndicator1">1. Trip Details</div>
+        <div class="step" id="stepIndicator2">2. Select Car</div>
+        <div class="step" id="stepIndicator3">3. Your Info</div>
+        <div class="step" id="stepIndicator4">4. Summary</div>
+    </div>
+
+    
+    <div id="step1">
+        <h2>Trip Details</h2>
+        <label>Pick-up location</label>
+        <select id="pickup-location">
+            <option>Prishtina Airport</option>
+            <option>Prishtina City</option>
+            <option>Ferizaj</option>
+            <option>Peja</option>
+        </select>
+
+        <label>Drop-off location</label>
+        <select id="dropoff-location">
+            <option>Prishtina Airport</option>
+            <option>Prishtina City</option>
+            <option>Ferizaj</option>
+            <option>Peja</option>
+        </select>
+
+        <label>Pick-up date</label>
+        <input type="date" id="pickup-date">
+
+        <label>Drop-off date</label>
+        <input type="date" id="dropoff-date">
+
+        <button onclick="goToStep2()">Next</button>
+    </div>
+
+    
+    <div id="step2" class="hidden">
+        <h2>Select Your Car</h2>
+
+        <div class="car-option" data-price="25" onclick="selectCar(this)">
+            <strong>Compact</strong><br>€25 / day
+        </div>
+        <div class="car-option" data-price="45" onclick="selectCar(this)">
+            <strong>SUV</strong><br>€45 / day
+        </div>
+        <div class="car-option" data-price="70" onclick="selectCar(this)">
+            <strong>Luxury</strong><br>€70 / day
+        </div>
+
+        <button onclick="goToStep3()">Next</button>
+    </div>
+
+    <div id="step3" class="hidden">
+        <h2>Your Information</h2>
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="First and Last Name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="example@domain.com" required>
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" placeholder="+383 44 123 456" required>
+
+        <button onclick="goToStep4()">Next</button>
+    </div>
+
+    
+    <div id="step4" class="hidden">
+        <h2>Summary</h2>
+        <div class="summary-box">
+            <p><strong>Location:</strong> <span id="summary-locations">-</span></p>
+            <p><strong>Dates:</strong> <span id="summary-dates">-</span></p>
+            <p><strong>Car:</strong> <span id="summary-car">-</span></p>
+            <p><strong>Total Price:</strong> €<span id="summary-price">0</span></p>
+            <p><strong>Name:</strong> <span id="summary-name">-</span></p>
+            <p><strong>Email:</strong> <span id="summary-email">-</span></p>
+            <p><strong>Phone:</strong> <span id="summary-phone">-</span></p>
+        </div>
+        <button onclick="finishBooking()">Confirm Booking</button>
+    </div>
+
+    <div id="confirmationMessage" class="hidden" style="text-align:center; padding:30px; background:#e6ffe6; border:2px solid #009900; border-radius:10px; font-size:18px;">
+        <strong>Thank you!</strong><br>
+        Your booking is confirmed! 🎉<br>
+        We’ll contact you shortly with the details.
+        <br><br>
+        <button onclick="location.reload()">Book Another Car</button>
+    </div>
+</div>
+
+<section class="partners-section">
+    <h2>Our Trusted Partners</h2>
+    <div class="partners-slider">
+        <div class="slider-track">
+            <img src="images/hertz.png" alt="Hertz">
+            <img src="images/avis.png" alt="Avis">
+            <img src="images/europcar.png" alt="Europcar">
+            <img src="images/enterprise.png" alt="Enterprise">
+            <img src="images/sixt.png" alt="Sixt">
+            <img src="images/hertz.png" alt="Hertz">
+            <img src="images/avis.png" alt="Avis">
+            <img src="images/europcar.png" alt="Europcar">
+            <img src="images/enterprise.png" alt="Enterprise">
+            <img src="images/sixt.png" alt="Sixt">
+        </div>
+    </div>
 </section>
 
-<!-- BOOKING FORM -->
-<section class="form-section">
-    <form id="booking-form" novalidate>
+<footer class="new-footer">
+    <p>© 2025 AutoRent — Created by Anesa Kastrati</p>
+</footer>
 
-        <div class="form-group">
-            <label for="booking-name">Full Name</label>
-            <input type="text" id="booking-name" placeholder="Enter your full name" required>
-        </div>
+<script>
 
-        <div class="form-group">
-            <label for="booking-email">Email</label>
-            <input type="email" id="booking-email" placeholder="you@example.com" required>
-        </div>
+var selectedCarBox = null;
 
-        <div class="form-group">
-            <label for="booking-vehicle">Vehicle Type</label>
-            <select id="booking-vehicle" required>
-                <option value="">Select a vehicle</option>
-                <option value="Luxury Sedan">Luxury Sedan</option>
-                <option value="Family SUV">Family SUV</option>
-                <option value="Convertible">Convertible</option>
-                <option value="City Compact">City Compact</option>
-            </select>
-        </div>
+function goToStep2() {
+    var pickup = document.getElementById("pickup-date").value;
+    var dropoff = document.getElementById("dropoff-date").value;
 
-        <div class="form-inline">
-            <div class="form-group">
-                <label for="booking-start-date">Start Date</label>
-                <input type="date" id="booking-start-date" required>
-            </div>
+    if (pickup == "" || dropoff == "") {
+        alert("Please choose both dates");
+        return;
+    }
+    if (dropoff <= pickup) {
+        alert("Drop-off date must be after pick-up date");
+        return;
+    }
 
-            <div class="form-group">
-                <label for="booking-end-date">End Date</label>
-                <input type="date" id="booking-end-date" required>
-            </div>
-        </div>
+    document.getElementById("step1").className = "hidden";
+    document.getElementById("step2").className = "";
+    document.getElementById("stepIndicator1").className = "step";
+    document.getElementById("stepIndicator2").className = "step active-step";
+}
 
-        <div class="form-group">
-            <label for="booking-time">Pickup Time</label>
-            <input type="time" id="booking-time" required>
-        </div>
+function selectCar(box) {
+    
+    document.getElementById("step2").getElementsByClassName("car-option")[0].className = "car-option";
+    document.getElementById("step2").getElementsByClassName("car-option")[1].className = "car-option";
+    document.getElementById("step2").getElementsByClassName("car-option")[2].className = "car-option";
 
-        <div class="form-group">
-            <label>Extras</label>
-            <div class="checkbox-row">
-                <label><input type="checkbox" value="GPS"> GPS</label>
-                <label><input type="checkbox" value="Child Seat"> Child Seat</label>
-                <label><input type="checkbox" value="Additional Driver"> Additional Driver</label>
-            </div>
-        </div>
+    
+    box.className = "car-option car-selected";
+    selectedCarBox = box;
+}
 
-        <button class="btn-primary wide" type="submit">Confirm Booking</button>
+function goToStep3() {
+    if (selectedCarBox == null) {
+        alert("Please select a car first!");
+        return;
+    }
 
-        <div id="booking-message" class="form-message"></div>
+    document.getElementById("step2").className = "hidden";
+    document.getElementById("step3").className = "";
+    document.getElementById("stepIndicator2").className = "step";
+    document.getElementById("stepIndicator3").className = "step active-step";
+}
 
-    </form>
-</section>
+function goToStep4() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
 
+    if (name == "" || name.indexOf(" ") == -1) {
+        alert("Please enter your full name");
+        return;
+    }
+    if (email.indexOf("@") == -1) {
+        alert("Please enter a valid email");
+        return;
+    }
+
+    
+    var pickupDate = document.getElementById("pickup-date").value;
+    var dropoffDate = document.getElementById("dropoff-date").value;
+    var days = 1;
+    if (dropoffDate > pickupDate) {
+        var date1 = new Date(pickupDate);
+        var date2 = new Date(dropoffDate);
+        days = Math.ceil((date2 - date1) / (1000 * 60 * 60 * 24));
+    }
+
+    var pricePerDay = selectedCarBox.getAttribute("data-price");
+    var totalPrice = days * pricePerDay;
+    var carName = selectedCarBox.getElementsByTagName("strong")[0].innerHTML;
+
+    
+    document.getElementById("summary-locations").innerHTML = 
+        document.getElementById("pickup-location").value + " to " + 
+        document.getElementById("dropoff-location").value;
+    document.getElementById("summary-dates").innerHTML = pickupDate + " to " + dropoffDate;
+    document.getElementById("summary-car").innerHTML = carName;
+    document.getElementById("summary-price").innerHTML = totalPrice;
+    document.getElementById("summary-name").innerHTML = name;
+    document.getElementById("summary-email").innerHTML = email;
+    document.getElementById("summary-phone").innerHTML = phone;
+
+    document.getElementById("step3").className = "hidden";
+    document.getElementById("step4").className = "";
+    document.getElementById("stepIndicator3").className = "step";
+    document.getElementById("stepIndicator4").className = "step active-step";
+}
+
+function finishBooking() {
+    document.getElementById("step4").className = "hidden";
+    document.getElementById("confirmationMessage").className = "";
+}
+
+document.getElementById("stepIndicator1").className = "step active-step";
+</script>
+<!--MARIGONA KASTRATI END-->
+   
 <!-- FOOTER -->
 <footer class="new-footer">
     <div class="footer-top">
